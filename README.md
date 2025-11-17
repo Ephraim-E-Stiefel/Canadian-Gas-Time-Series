@@ -51,7 +51,7 @@ The project follows the classic Box-Jenkins methodology for time series analysis
 
 4.  ***Model Selection***: The models were compared using the $\text{AICc}$ criterion.
 
-5.  ***Diagnostic Checking***: The residuals of the best model were checked visually (ACF plot) and statistically (Ljung-Box test, $p = 0.838$) to confirm they resemble **white noise**.
+5.  ***Diagnostic Checking***: The residuals of the best model were checked visually (ACF plot) and statistically (Ljung-Box test, $p = 0.990$) to confirm they resemble **white noise**.
 
 6.  ***Forecasting & Evaluation***: The final model was used to forecast the 50 months of the held-out test set, and accuracy metrics (RMSE, MAE) were calculated.
 
@@ -65,8 +65,8 @@ Two models were compared on the training set. The **Automatic ARIMA** model was 
 
 | Model | Log-Likelihood | $\text{AICc}$ | Residual $\sigma^2$ |
 | :------------------ | :------- | :------------------ |:-------------------|
-| Manual $\text{ARIMA}(0, 1, 1)(0, 1, 1)_{12}$ | $720.37$ | $-1435.$ | $0.00382$ |
-| **Auto $\text{ARIMA}(1, 1, 1)(0, 1, 1)_{12}$** | $\mathbf{726.04}$ | $\mathbf{-1444.}$ | $\mathbf{0.00374}$ |
+| Manual $\text{ARIMA}(0, 1, 1)(0, 1, 1)_{12}$ | $640.$ | $-1274.$ | $0.00403$ |
+| **Auto $\text{ARIMA}(1, 1, 1)(0, 1, 1)_{12}$** | $\mathbf{645.}$ | $\mathbf{-1281.}$ | $\mathbf{0.00395}$ |
 
 ---
 
@@ -74,10 +74,10 @@ Two models were compared on the training set. The **Automatic ARIMA** model was 
 
 The final **$\text{ARIMA}(1, 1, 1)(0, 1, 1)_{12}$** model was evaluated on the 50-month test set (Jan 2001 - Feb 2005).
 
-| Metric | Formula | Value (Out-of-Sample) |
-| :--- | :--- | :--- |
-| **Root Mean Squared Error (RMSE)** | $\sqrt{\text{mean}(\text{error}^2)}$ | **[Value from your final code run]** |
-| **Mean Absolute Error (MAE)** | $\text{mean}(|\text{error}|)$ | **[Value from your final code run]** |
+| Metric | Value (Out-of-Sample) |
+| :--- | :--- |
+| **Root Mean Squared Error (RMSE)** | **2.028514** |
+| **Mean Absolute Error (MAE)** | **1.753585** |
 
 The model provided a robust and accurate forecast on the unseen test data. The forecast plot (Figure 5) visually confirms that the model successfully tracks the seasonal and level changes in the actual gas production volume.
 
@@ -85,16 +85,16 @@ The model provided a robust and accurate forecast on the unseen test data. The f
 
 ## Repository Structure
 
-/Canadian-Gas-Time-Series/
-|-- README.md
-|-- **R/**
-|   |-- **01_arima_analysis.R** (Main script)
-|-- **Figures/**
-|   |-- 01_raw_data_volume.png
-|   |-- 02_transformed_data.png
-|   |-- 03_final_differencing_diagnostics.png
-|   |-- 04_residual_diagnostics.png
-|   |-- 05_final_forecast_evaluation.png
+/Canadian-Gas-Time-Series/   
+|-- README.md   
+|-- **R/**   
+|   |-- **01_arima_analysis.R** (Main script)   
+|-- **Figures/**   
+|   |-- 01_raw_data_volume.png   
+|   |-- 02_transformed_data.png   
+|   |-- 03_final_differencing_diagnostics.png   
+|   |-- 04_residual_diagnostics.png   
+|   |-- 05_final_forecast_evaluation.png   
 
 ---
 
@@ -125,16 +125,10 @@ This project is built entirely in **R** using the specialized `fable` ecosystem 
 
 ---
 
-## Future Work
-
-* **Exogenous Variables (ARIMAX)**: Explore including economic factors (e.g., population growth, temperature) into the model to potentially improve accuracy further.
-* **Alternative Models**: Compare the $\text{ARIMA}$ model against neural network-based approaches like $\text{LSTM}$ (Long Short-Term Memory).
-* **Model Monitoring**: Establish a system to monitor the model's residuals and forecast accuracy drift over time, signaling when retraining is necessary.
-
----
-
 ## License
 
 This project is licensed under the MIT License - see the `LICENSE` file for details.
+
+---
 
 > **Note:** Some portions of this documentation were generated with the assistance of **Generative AI** to improve clarity and structure.
