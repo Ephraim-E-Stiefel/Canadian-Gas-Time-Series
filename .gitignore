@@ -1,0 +1,19 @@
+# R Project Configuration
+.Rproj.user/
+.RData
+.Rhistory
+.Ruserdata
+.DS_Store
+
+# R Session/Temporary files
+*-Ex.R
+*.local
+
+# Cache and build directories
+/cache/
+/log/
+/tmp/
+
+# Custom paths/files from your project that should be ignored
+# (Assuming your Figures folder is where you want to keep the final output)
+# Since you want to upload the Figures, we will NOT ignore the Figures folder.
