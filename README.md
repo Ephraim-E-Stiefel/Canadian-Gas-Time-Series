@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository documents a time series analysis project focused on developing and evaluating an **SARIMA (Seasonal Autoregressive Integrated Moving Average) model** to forecast **Canadian Gas Production**. The project follows a rigorous statistical methodology to achieve a robust forecast, including data transformation, stationarity testing (KPSS), model identification (ACF/PACF), and out-of-sample accuracy evaluation.
+This repository documents a time series analysis project focused on developing and evaluating an **SARIMA (Seasonal Autoregressive Integrated Moving Average) model** to forecast **Canadian Gas Production**. The project follows standard statistical methodology to achieve a robust forecast, including data transformation, stationarity testing (KPSS), model identification (ACF/PACF), and out-of-sample accuracy evaluation.
 
 ---
 
