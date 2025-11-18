@@ -88,7 +88,7 @@ The model provided a robust and accurate forecast on the unseen test data. The f
 /Canadian-Gas-Time-Series/   
 |-- README.md   
 |-- **R/**   
-|   |-- 01_Canadian_Gas_Time_Series.R
+|   |-- 01_Canadian_Gas_Time_Series.R   
 |-- **Figures/**   
 |   |-- 01_raw_data_volume.png   
 |   |-- 02_transformed_data.png   
